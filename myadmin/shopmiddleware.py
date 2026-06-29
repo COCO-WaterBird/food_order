@@ -15,7 +15,7 @@ class ShopMiddleware:
         print("url:", path)
 
         #判断管理后台是否登录
-        urllist = ['/myadmin/login/','/myadmin/logout/','/myadmin/dologin/']
+        urllist = ['/myadmin/login/','/myadmin/logout/','/myadmin/dologin/','/myadmin/verify','/myadmin/verify/','/myadmin/login','/myadmin/logout','/myadmin/dologin']
         #判断当前请求url地址是否以myadmin开头,并且不在urllist中,才做判断
         if re.match(r'^/myadmin', path) and (path not in urllist):
             #判断是否已经登录(在session中是否有adminuser信息)
